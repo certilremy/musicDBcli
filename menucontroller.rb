@@ -1,5 +1,7 @@
 require_relative 'config.rb'
+
 class Menucontroller
+
     def self.mainMenu
         puts" Welcome to achiv mizik! Achiv mizik is a CLI app that let you save your fav music to a database.".yellow
         puts" please f0llow these step here to use the app"
@@ -17,7 +19,8 @@ class Menucontroller
         getMusic()
         when "2"
         puts "2"
-        AddMusic()
+        music = Addmusic.new
+        music.addMusic
         when "3"
         deleteMizik()
         when "4"

@@ -1,2 +1,3 @@
 require_relative 'config.rb'
-Menucontroller.mainMenu1
+
+Menucontroller.mainMenu
