@@ -29,7 +29,8 @@ class Menucontroller
         music = Addmusic.new
         music.addMusic
         when "3"
-        deleteMizik()
+        d = Deletemusic.new
+        d.deleteMizik
         when "4"
         puts "4"
         when "5"
