@@ -16,7 +16,7 @@ class Addmusic
         confirm.downcase
         if confirm =="yes"
             Song.create(name: name, album: album)
-        elseif  config =="no"
+        elsif  confirm =="no"
         puts "please enter the modifyed  name of the music if no Enter the same"
         name = gets.strip()
         puts "please enter the album title if no enter the same"
