@@ -2,6 +2,24 @@ require_relative 'config.rb'
 
 class Menucontroller
 
+    def self.subMenu
+        puts 'what do you want to do else?'.yellow
+           puts "- Type 1 to go to the main menu"
+           puts "- Type exit to quit the app"
+   
+   
+           choice = gets.strip()
+           choice.downcase
+       
+           case choice
+           when "1"
+           self.mainMenu
+           when "2"
+           puts "quitting"
+           else 
+               puts "this is not a valide choice!"
+           end
+       end
    #
     
 
@@ -24,13 +42,15 @@ class Menucontroller
                 m.printMizik
               
             }
+            self.subMenu
         when "2"
-        puts "2"
         music = Addmusic.new
         music.addMusic
+        self.subMenu
         when "3"
         d = Deletemusic.new
         d.deleteMizik
+        self.subMenu
         when "4"
         puts "4"
         when "5"
@@ -43,24 +63,7 @@ class Menucontroller
     end
 
 
-    def subMenu
-     puts 'what do you want to do else?'
-        puts "- Type 1 to go to the main menu"
-        puts "- Type exit to quit the app"
-
-
-        choice = gets.strip()
-        choice.downcase
-    
-        case choice
-        when "1"
-        self.mainMenu
-        when "2"
-        puts "quitting"
-        else 
-            puts "this is not a valide choice!"
-        end
-    end
+   
 
     
 end
