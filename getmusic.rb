@@ -1,4 +1,5 @@
-require_relativ 'config.rb'
+require_relative 'config.rb'
+
 class GetMusic
     attr_accessor :id, :name, :album
   
@@ -40,8 +41,4 @@ class GetMusic
     puts "#{self.id} : #{self.name} : #{self.album}"
     
     end
-
-    
-
-  end
 end
