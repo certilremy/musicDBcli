@@ -55,7 +55,7 @@ class Menucontroller
         when "4"
         puts "4"
         when "5"
-            s = Sear5ch.new
+            s = Search.new
             s.searchname
         when "exit"
             puts "you're quitting the application"

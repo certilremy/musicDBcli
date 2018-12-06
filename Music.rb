@@ -42,12 +42,13 @@ class Song
     end
 
     def self.find_by_name(name)
-        sql = "SELECT * FROM mizik WHERE name = ?"
-        result = DB[:conn].execute(sql, name)[0]
-        if result.nil?
-           puts "NO music with this name!"
-        else
-        Song.new(result[0], result[1], result[2])
+        sql = "SELECT * FROM mizik WHERE lower(name) = ?"
+        result = DB[:conn].execute(sql, name)
+       if result.size > 0 
+        rmi = result[0]
+          Song.new(rmi[0], rmi[1], rmi[2])
+       else
+          nil
        end
       end
     
