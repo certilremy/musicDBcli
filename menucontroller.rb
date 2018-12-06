@@ -30,6 +30,7 @@ class Menucontroller
         puts "- Type 2 to add a new music"
         puts "- Type 3 to delete a music"
         puts "- Type 4 to modify a music"
+        puts "- Type 5 to search for a music"
         puts "- Exit to quit the application"
     
         choice = gets.strip()
@@ -54,7 +55,8 @@ class Menucontroller
         when "4"
         puts "4"
         when "5"
-        puts"5"
+            s = Sear5ch.new
+            s.searchname
         when "exit"
             puts "you're quitting the application"
         else 

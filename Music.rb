@@ -40,5 +40,15 @@ class Song
         song.save
         song
     end
+
+    def self.find_by_name(name)
+        sql = "SELECT * FROM mizik WHERE name = ?"
+        result = DB[:conn].execute(sql, name)[0]
+        if result.nil?
+           puts "NO music with this name!"
+        else
+        Song.new(result[0], result[1], result[2])
+       end
+      end
     
     end
